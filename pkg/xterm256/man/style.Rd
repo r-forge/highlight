@@ -17,10 +17,10 @@ style(x, fg = NULL, bg = NULL)
 text to style
 }
   \item{fg}{
-foreground color
+foreground color. See details below
 }
   \item{bg}{
-background color
+background color. See details below
 }
 }
 \value{
@@ -32,7 +32,18 @@ background color
 \author{
 Romain Francois <francoisromain@free.fr>
 }
-
+\details{
+	The colors used for the \samp{bg} or \samp{fg} argument can be 
+	integers between 0 and 255, which are mapped to the xterm colors
+	(see \url{http://frexx.de/xterm-256-notes/}) or strings. 
+	
+	In the case of strings, a mapping is made uwing either 
+	the named colors \code{\link{colors}}
+	or colors in hex representation, such as the output of the \code{\link{rgb}} 
+	function. The closest color from the requested is used. Distance
+	is evaluated in the RGB space using an euclidean distance. 
+	See \code{\link[stats]{dist}}
+}
 \examples{
 	\dontrun{
 		text <- c( "liberté", "égalité", "fraternité" )
