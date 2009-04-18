@@ -1,0 +1,6 @@
+
+export( style )
+importFrom( grDevices, colors )
+importFrom( stats, dist )
+importFrom( utils, read.table )
+
