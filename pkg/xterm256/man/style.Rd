@@ -35,7 +35,7 @@ Romain Francois <francoisromain@free.fr>
 
 \examples{
 	\dontrun{
-		text <- c( "liberté", "egalité", "fraternité" )
+		text <- c( "liberté", "égalité", "fraternité" )
 		bg   <- c("blue", "white", "red" )
 		line <- paste( 
 			rep( " ", length.out = sum( nchar( text ) ) + 2 ), collapse = "")
