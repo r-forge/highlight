@@ -22,6 +22,13 @@ foreground color. See details below
   \item{bg}{
 background color. See details below
 }
+\item{check.xterm}{
+	logical. Do we check that the terminal is xterm. If the check is 
+	performed and the \samp{TERM} environment variable is not 
+	\samp{xterm} the text will be returned as is. This is a precaution
+	so that the package can be used (but not be very useful) on 
+	other terminal without displaying irrelevant escape sequences.
+}
 }
 \value{
 	The text \code{x} possibly wrapped in escape sequences

@@ -1,8 +1,8 @@
 Package: xterm256
 Type: Package
 Title: Support for xterm256 escape sequences
-Version: 0.0
-Date: 2009-04-18
+Version: 0.1
+Date: 2009-04-25
 Author: Romain Francois
 Maintainer: Romain Francois <francoisromain@free.fr>
 Description: Support for xterm256 escape sequences, enabling R

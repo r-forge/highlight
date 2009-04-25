@@ -5,8 +5,10 @@
 #' @param x text to style
 #' @param fg foreground color
 #' @param bg backgorund color
-style <- function( x, fg = NULL, bg = NULL){
+style <- function( x, fg = NULL, bg = NULL, check.xterm = TRUE ){
 
+	if( check.xterm && Sys.getenv( "TERM" ) != "xterm" ) return(x)
+	
 	if( is.null( fg ) && is.null(bg ) ) return(x)
 	
 	fg. <- xtermColor( fg, length(x) )
@@ -113,4 +115,11 @@ xtermColor.character <- function( color, n ){
 	xtermColor( closest( color ), n )
 }
 
+showColors <- function( cols = colors() ){
+	width <- max( nchar( cols ) ) + 2
+	n <- floor( getOption( "width" ) / width)
+	txt <- style( sprintf( sprintf( "%%-%ds", width ), cols ), fg = cols )
+	txt <- suppressWarnings( apply( matrix( txt, ncol = n, byrow = TRUE), 1, paste, collapse = " " ) )
+	cat( txt, sep ="\n" )
+}
 
