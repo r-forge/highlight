@@ -9,4 +9,5 @@ Description: Support for xterm256 escape sequences, enabling R
 	functions to take advantage of foreground color, background color, 
 	in capable terminals
 License: GPL-3
+Depends: highlight
 LazyLoad: yes

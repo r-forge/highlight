@@ -1,4 +1,4 @@
-
+import( highlight )
 export( style )
 importFrom( grDevices, colors )
 importFrom( stats, dist )
