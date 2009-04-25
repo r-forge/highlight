@@ -1,22 +1,24 @@
 
 formatter_xterm <- function( tokens, styles, stylesheet = "default", ... ){
 	
-	rl <- NULL
-	xtr <- getStyleFile( stylesheet, "xterm" )
-	if( !is.null( xtr ) ){
-		rl <- readLines( xtr )	
-		rl <- grep( "=", rl, value = TRUE )
-		rx <- "^(.*?)=(.*)$"
-		values <- sub( rx, "\\2", rl )
-		ids <- sub( rx, "\\1", rl )
-		ifelse( styles == "", 
-			tokens, 
-			sprintf( '\033[%s%s\033[0m', values[ match( styles, ids ) ], tokens ) 
-		)
-	} else{
-		tokens
-	}
-	 
+	css <- getStyleFile( stylesheet, "css" )
+	p   <- css.parser( css )
+	dec <- lapply( p, function( declaration ) {
+		out <- list( bg = NA, fg = NA )
+		if( "color" %in% names(declaration) ){
+			out[["fg"]] <- declaration[["color"]]
+		}
+		if( "background" %in% names(declaration) ){
+			out[["bg"]] <- declaration[["bg"]]
+		}
+		out
+	} )
+	dec.fg <- as.character( sapply( dec, "[[", "fg" ) ); names( dec.fg ) <- names( dec) 
+	dec.bg <- as.character( sapply( dec, "[[", "bg" ) ); names( dec.bg ) <- names( dec) 
+	out <- style( tokens, 
+		bg = if( !all(is.na(dec.bg) ) ) dec.bg[styles], 
+		fg = if( !all(is.na(dec.fg) ) ) dec.fg[styles] )
+	out
 }
 
 translator_xterm <- function( x ){

@@ -8,7 +8,6 @@
 style <- function( x, fg = NULL, bg = NULL, check.xterm = TRUE ){
 
 	if( check.xterm && Sys.getenv( "TERM" ) != "xterm" ) return(x)
-	
 	if( is.null( fg ) && is.null(bg ) ) return(x)
 	
 	fg. <- xtermColor( fg, length(x) )
