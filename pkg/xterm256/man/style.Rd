@@ -7,7 +7,7 @@
 }
 \description{
 	The function wraps the text x in the appropriate xterm 256 escape
-	sequences to add backgorund and foreground color
+	sequences to add background and foreground color
 }
 \usage{
 style(x, fg = NULL, bg = NULL)
