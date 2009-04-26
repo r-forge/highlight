@@ -1,8 +1,9 @@
 import( highlight )
-export( style )
 importFrom( grDevices, colors )
 importFrom( stats, dist )
 importFrom( utils, read.table )
+
+export( style )
 exportPattern( "_xterm$" )
 export( print.function )
 
