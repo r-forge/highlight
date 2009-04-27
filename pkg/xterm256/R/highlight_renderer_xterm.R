@@ -42,7 +42,7 @@ header_xterm <- function( ){
 	"" 
 }                     
 
-footer_xterm <- function( document ){
+footer_xterm <- function( ){
 	"\n"
 }
 

@@ -1,6 +1,13 @@
 \name{renderer_xterm}
 \Rdversion{1.1}
 \alias{renderer_xterm}
+\alias{footer_xterm}
+\alias{header_xterm}
+\alias{newline_xterm}
+\alias{space_xterm}
+\alias{formatter_xterm}
+\alias{translator_xterm}
+
 \title{
 highlight renderer using xterm 256 escape sequences
 }
@@ -16,6 +23,12 @@ renderer_xterm(translator = translator_xterm,
 	space = space_xterm, newline = newline_xterm, 
 	header = header_xterm, 
 	footer = footer_xterm, stylesheet = "default", ...)
+translator_xterm(x)
+formatter_xterm( stylesheet )
+header_xterm()
+footer_xterm()
+newline_xterm()
+space_xterm()
 }
 \arguments{
   \item{translator}{
@@ -41,7 +54,7 @@ Empty footer
 }
   \item{stylesheet}{
 The stylesheet to use. This will be parsed by the 
-\code{\link{css.parser}} function and the information contained 
+\code{\link[highlight]{css.parser}} function and the information contained 
 will be used by the formatter. Only background and foreground colors 
 (css settings \samp{color} and \samp{background}) 
 are currently honored by the formatter. 
@@ -49,10 +62,13 @@ are currently honored by the formatter.
   \item{\dots}{
 Additional arguments
 }
+\item{x}{
+	input of the translator. Returned as is.
+}
 }
 \value{
 	a \samp{renderer} object suitable for the \samp{renderer}
-	argument of the \code{\link{highlight}} function
+	argument of the \code{\link[highlight]{highlight}} function
 }
 \author{
 Romain Francois <francoisromain@free.fr>

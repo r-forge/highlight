@@ -10,7 +10,7 @@
 	sequences to add background and foreground color
 }
 \usage{
-style(x, fg = NULL, bg = NULL)
+style(x, fg = NULL, bg = NULL, check.xterm = TRUE)
 }
 \arguments{
   \item{x}{
