@@ -1,9 +1,9 @@
-X=$(R_HOME)/bin/x
-FAKE_OBJ=x.so
+EXEC=$(R_HOME)/bin/exec
+FAKE_OBJ=exec.so
 
 all:
 	@touch $(FAKE_OBJ)
-	install "x" $(X)
+	install "exec" $(EXEC)
 
 clean:
 	rm -fv $(FAKE_OBJ)
