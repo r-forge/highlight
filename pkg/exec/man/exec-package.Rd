@@ -5,8 +5,8 @@
 \docType{package}
 \title{Execute scripts in exec directory of packages}
 \description{
-The exec package ships the exec script that can execute scripts
-that are contained in exec directories of R packages
+Support for executing scripts from the exec directory 
+of packages
 }
 \details{
 \tabular{ll}{
