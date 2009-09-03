@@ -1,16 +1,16 @@
-\name{x-package}
+\name{exec-package}
 \Rdversion{1.1}
-\alias{x-package}
-\alias{x}
+\alias{exec-package}
+\alias{exec}
 \docType{package}
 \title{Execute scripts in exec directory of packages}
 \description{
-The x package ships the x script that can execute scripts
+The exec package ships the exec script that can execute scripts
 that are contained in exec directories of R packages
 }
 \details{
 \tabular{ll}{
-Package: \tab x\cr
+Package: \tab exec\cr
 Type: \tab Package\cr
 Version: \tab 0.0\cr
 Date: \tab 2009-08-07\cr
