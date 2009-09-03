@@ -1,0 +1,23 @@
+#!/bin/env Rscript
+
+args <- commandArgs(TRUE)
+if( length(args) < 2 ){
+        stop( "usage : R CMD execute package script [parameters]\n" )
+}
+package <- args[1]
+script  <- args[2]
+scriptfile    <- file.path( system.file( "exec", script, package = package ) )
+if( !file.exists( scriptfile ) ){
+        stop( sprintf( "file not found: '%s' ", scriptfile  ) )
+}
+
+# look for a /bin/env shebang to accomodate windows
+first   <- readLines( scriptfile, n = 1 )
+if( grepl( "/bin/env", first ) ){
+	program <- sub( "^.*/bin/env *(.*)$", "\\1", first )
+}
+
+trail   <- if( length(args) > 2 ) paste( tail( args, -2 ), sep = " " ) else ""
+cmd     <- sprintf( '"%s" %s', scriptfile, trail )
+system( cmd )
+

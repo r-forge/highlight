@@ -1,0 +1,11 @@
+Package: exec
+Type: Package
+Title: Executes scripts in exec directories of packages
+Version: 0.0
+Date: 2009-08-07
+Author: Romain Francois <francoisromain@free.fr>
+Maintainer: Romain Francois <francoisromain@free.fr>
+Description: Executes scripts in exec directories of packages
+License: GPL-3
+LazyLoad: yes
+
