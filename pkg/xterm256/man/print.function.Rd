@@ -5,7 +5,7 @@
 print functions using syntax highlighting and the xterm renderer
 }
 \description{
-This function overrides \code{\link[base]{print.function}} to allow
+This function overrides \code{print.function} from the base package to allow
 \code{\link[highlight]{highlight}} to perform syntax highlighting. 
 The highlighted syntax is rendered using the xterm renderer.
 }

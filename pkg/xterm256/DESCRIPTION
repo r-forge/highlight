@@ -1,13 +1,13 @@
 Package: xterm256
 Type: Package
 Title: Support for xterm256 escape sequences
-Version: 0.1
-Date: 2009-04-25
+Version: 0.1-1
+Date: 2009-10-14
 Author: Romain Francois
 Maintainer: Romain Francois <francoisromain@free.fr>
 Description: Support for xterm256 escape sequences, enabling R
 	functions to take advantage of foreground color, background color, 
 	in capable terminals
-License: GPL-3
+License: GPL (>= 3.0)
 Depends: highlight
 LazyLoad: yes
