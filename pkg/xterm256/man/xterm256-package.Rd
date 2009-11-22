@@ -15,8 +15,8 @@ Support for xterm256 escape sequences, enabling R
 \tabular{ll}{
 Package: \tab xterm256\cr
 Type: \tab Package\cr
-Version: \tab 0.0\cr
-Date: \tab 2009-04-18\cr
+Version: \tab 0.1-1\cr
+Date: \tab 2009-11-22\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
