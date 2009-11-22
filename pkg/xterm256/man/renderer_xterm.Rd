@@ -1,8 +1,6 @@
 \name{renderer_xterm}
 \Rdversion{1.1}
 \alias{renderer_xterm}
-\alias{footer_xterm}
-\alias{header_xterm}
 \alias{newline_xterm}
 \alias{space_xterm}
 \alias{formatter_xterm}
@@ -21,12 +19,9 @@ highlight renderer using xterm 256 escape sequences
 renderer_xterm(translator = translator_xterm, 
 	formatter = formatter_xterm(stylesheet = stylesheet), 
 	space = space_xterm, newline = newline_xterm, 
-	header = header_xterm, 
-	footer = footer_xterm, stylesheet = "default", ...)
+	header = NULL, footer = NULL, stylesheet = "default", ...)
 translator_xterm(x)
 formatter_xterm( stylesheet )
-header_xterm()
-footer_xterm()
 newline_xterm()
 space_xterm()
 }

@@ -1,7 +1,7 @@
 Package: xterm256
 Type: Package
 Title: Support for xterm256 escape sequences
-Version: 0.1-1
+Version: 0.1-2
 Date: 2009-11-22
 Author: Romain Francois
 Maintainer: Romain Francois <francoisromain@free.fr>
