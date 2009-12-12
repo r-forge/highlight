@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+cp parser/inst/grammar/gram.y parser/src/
+cp parser/src/parser.h parser/inst/include/parser.h
+cd parser/src
+bison -vt gram.y -o gram.c
+mv gram.output ../inst/grammar
+rm gram.y
+cd ../..
+
+R CMD build parser
+sudo /usr/local/lib/R/bin/R CMD INSTALL parser_0.0-6.tar.gz
+
+
