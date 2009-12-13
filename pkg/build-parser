@@ -1,6 +1,7 @@
 #!/bin/bash 
 
 cp parser/inst/grammar/gram.y parser/src/
+
 cp parser/src/parser.h parser/inst/include/parser.h
 cd parser/src
 bison -vt gram.y -o gram.c
