@@ -38,11 +38,13 @@ newline_xterm <- function( ){
 	"\n" 
 }
 
+footer_xterm_ <- function(){ "\n" }
+
 renderer_xterm <- function(
 	translator = translator_xterm, 
 	formatter = formatter_xterm( stylesheet = stylesheet ), 
 	space = space_xterm, newline = newline_xterm, 
-	header = NULL, footer = NULL, 
+	header = NULL, footer = footer_xterm_ , 
 	stylesheet = "default", 
 	... ){
 	
