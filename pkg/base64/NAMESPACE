@@ -1,0 +1,6 @@
+useDynLib( "base64" )
+
+export( encode )
+export( decode )
+export( img )
+

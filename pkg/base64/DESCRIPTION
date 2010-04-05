@@ -1,0 +1,12 @@
+Package: base64
+Type: Package
+Title: Base 64 encoder/decoder
+Version: 1.1
+Date: 2010-04-04
+Author: Romain Francois, based on code by Bob Trower available 
+	at http://base64.sourceforge.net/
+Maintainer: Romain Francois <romain@r-enthusiasts.com>
+Description: Base 64 encoder/decoder
+License: GPL (>=2)
+LazyLoad: yes
+URL: http://romainfrancois.blog.free.fr/index.php?category/R-package/base64
