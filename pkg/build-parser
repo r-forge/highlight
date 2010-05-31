@@ -1,7 +1,6 @@
 #!/bin/bash 
 
 cp parser/inst/grammar/gram.y parser/src/
-cp parser/src/parser.h parser/inst/include/parser.h
 cd parser/src
 bison -vt gram.y -o gram.c
 mv gram.output ../inst/grammar
@@ -11,7 +10,5 @@ cd ../..
 R CMD build parser
 
 # remove the include file (volatile file, not svn'ed)
-rm parser/inst/include/parser.h
-sudo /usr/local/lib/R/bin/R CMD INSTALL parser_0.0-6.tar.gz
-
+R CMD INSTALL parser_0.0-10.tar.gz
 
