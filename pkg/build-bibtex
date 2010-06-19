@@ -1,11 +1,12 @@
 #!/bin/bash 
 
+rm -fr bibtex/src-*
 cp bibtex/inst/grammar/bibparse.y bibtex/src/
 cp bibtex/inst/grammar/biblex.l bibtex/src/
 cd bibtex/src
 
-bison -vtd bibparse.y -o bibparse.c
-lex -l -t biblex.l > biblex.c
+bison -vtd bibparse.y -o bibparse.cpp
+lex -l -t biblex.l > biblex.cpp
 rm bibparse.y
 rm biblex.l
 mv bibparse.output ../inst/
@@ -13,4 +14,6 @@ cd ../..
 
 R CMD build bibtex 
 R CMD INSTALL bibtex_0.2-0.tar.gz
+rm -fr bibtex/src-*
+
 
