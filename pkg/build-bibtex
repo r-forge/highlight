@@ -12,8 +12,8 @@ rm biblex.l
 mv bibparse.output ../inst/
 cd ../..
 
-# R CMD build bibtex 
-# R CMD INSTALL bibtex_0.2-0.tar.gz
-# rm -fr bibtex/src-*
+R CMD build bibtex 
+R CMD INSTALL bibtex_0.2-0.tar.gz
+rm -fr bibtex/src-*
 
 
