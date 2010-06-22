@@ -13,7 +13,7 @@ mv bibparse.output ../inst/
 cd ../..
 
 R CMD build bibtex 
-R CMD INSTALL bibtex_0.2-0.tar.gz
+R CMD INSTALL bibtex_0.2-1.tar.gz
 rm -fr bibtex/src-*
 
 
