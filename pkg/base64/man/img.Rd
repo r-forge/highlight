@@ -11,8 +11,8 @@ This creates html code to embed a png file into an html document.
 The following graph is embedded in the document using the \code{img} function	
 	
 \ifelse{html}{ 
-	\Sexpr[results=rd, echo=FALSE]{
-	 
+	\Sexpr[results=rd, stage=build, echo=FALSE]{
+	    
 	library( base64 )
 	library( grDevices )
 	library( graphics )

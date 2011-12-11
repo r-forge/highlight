@@ -160,12 +160,12 @@ int b64( int opt, char *infilename, char *outfilename, int linesize )
     }
     else {
         FILE *outfile;
-        if( !outfilename ) {
-            outfile = stdout;
-        }
-        else {
+        // if( !outfilename ) {
+        //     outfile = stdout;
+        // }
+        // else {
             outfile = fopen( outfilename, "wb" );
-        }
+        // }
         if( !outfile ) {
             perror( outfilename );
         }
@@ -182,12 +182,12 @@ int b64( int opt, char *infilename, char *outfilename, int linesize )
             else {
                  retcode = 0;
             }
-            if( outfile != stdout ) {
+            // if( outfile != stdout ) {
                 if( fclose( outfile ) != 0 ) {
                     perror( b64_message( B64_ERROR_OUT_CLOSE ) );
                     retcode = B64_FILE_IO_ERROR;
                 }
-            }
+            // }
         }
         if( infile != stdin ) {
             fclose( infile );
